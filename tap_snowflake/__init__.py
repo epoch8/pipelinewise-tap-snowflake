@@ -175,7 +175,7 @@ def get_table_columns(snowflake_conn, tables):
 
 def discover_catalog(snowflake_conn, config):
     """Returns a Catalog describing the structure of the database."""
-    tables = config.get('tables').split(',')
+    tables = config.get('tables')
     sql_columns = get_table_columns(snowflake_conn, tables)
 
     table_info = {}
