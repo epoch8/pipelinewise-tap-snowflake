@@ -126,7 +126,7 @@ def row_to_singer_record(catalog_entry, version, row, columns, time_extracted):
             row_to_persist += (elem.isoformat(),)
 
         elif isinstance(elem, datetime.date):
-            row_to_persist += (elem.isoformat() + ' 00:00:00+00:00',)
+            row_to_persist += (elem.isoformat(),)
 
         elif isinstance(elem, datetime.timedelta):
             epoch = datetime.datetime.utcfromtimestamp(0)
